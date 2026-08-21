@@ -2,12 +2,12 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "base:dev": "cross-env NODE_ENV=development bun --env-file=./.env.development.local",
-    "base:prod": "cross-env NODE_ENV=production bun --env-file=./.env.production.local",
+    "base:dev": "NODE_ENV=development bun --env-file=./.env.development.local",
+    "base:prod": "NODE_ENV=production bun --env-file=./.env.production.local",
     "bootstrap:dev": "bun run base:dev -- run ./src/core/bootstrap/index.ts",
     "bootstrap:prod": "bun run base:prod -- run ./src/core/bootstrap/index.ts",
     "build": "bun run base:prod -- run ./src/core/build.ts",
-    "dev": "cross-env NODE_ENV=development nodemon",
+    "dev": "NODE_ENV=development nodemon",
     "knip:deps": "knip --dependencies",
     "knip:exports": "knip --exports",
     "lint": "eslint --max-warnings 0",
@@ -16,27 +16,26 @@
   },
   "dependencies": {
     "consola": "^3.4.2",
-    "es-toolkit": "^1.49.0",
-    "hono": "^4.12.30",
+    "es-toolkit": "^1.51.0",
+    "hono": "^4.13.3",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.1.0",
-    "@asteasolutions/zod-to-openapi": "^9.0.0",
+    "@antfu/eslint-config": "^9.3.0",
+    "@asteasolutions/zod-to-openapi": "^9.1.0",
     "@hono/swagger-ui": "^0.6.1",
     "@kikiutils/eslint-config": "^9.2.0",
     "@kikiutils/tsconfigs": "^7.0.0",
-    "@scalar/hono-api-reference": "^0.11.9",
-    "@types/bun": "^1.3.14",
-    "cross-env": "^10.1.0",
-    "eslint": "^10.7.0",
-    "knip": "^6.26.0",
+    "@scalar/hono-api-reference": "^0.11.14",
+    "@types/bun": "^1.4.0",
+    "eslint": "^10.8.1",
+    "knip": "^6.32.2",
     "mlly": "^1.8.2",
     "nodemon": "^3.1.14",
-    "openapi3-ts": "^4.6.0",
+    "openapi3-ts": "^4.6.1",
     "type-fest": "^5.8.0",
     "typescript": "^6.0.3",
-    "unimport": "^6.3.0"
+    "unimport": "^6.4.0"
   },
   "overrides": {
     "typescript": "^6.0.3"
